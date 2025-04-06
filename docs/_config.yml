@@ -3,10 +3,10 @@
 
 title: GlucoPilot Docs
 description: GlucoPilot API documentation.
-url: https://glucopilot.co.uk
+url: "https://docs.glucopilot.co.uk"
 google_analytics_key:
 permalink: pretty
-baseurl:
+baseurl: "https://docs.glucopilot.co.uk"
 
 # -----
 # Build
