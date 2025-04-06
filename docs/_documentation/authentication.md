@@ -5,9 +5,13 @@ parameters:
   - name:
     content:
 content_markdown: |-
-  You need to be authenticated for all API requests. You can generate an API key in your developer dashboard.
+  You need to be authenticated for all API requests. You can generate an auth token by calling the `/identity/v1/login` endpoint with your email and password.
 
-  Add the API key to all requests as a GET parameter.
+  JWT tokens should be provided via <a href="https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/" target="_blank">HTTP Bearer authentication</a>.
+
+  ```
+  Authorization: Bearer YOUR_ACCESS_TOKEN
+  ```
 
   Nothing will work unless you include this API key
   {: .error}
@@ -17,13 +21,8 @@ left_code_blocks:
     language:
 right_code_blocks:
   - code_block: |2-
-       $.get("http://api.myapp.com/books/", { "token": "YOUR_APP_KEY"}, function(data) {
-         alert(data);
-       });
-    title: JQuery
-    language: javascript
-  - code_block: |2-
-       curl http://api.myapp.com/books?token=YOUR_APP_KEY
+       curl http://api.myapp.com/api/v1/readings/ \
+       -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
     title: Curl
     language: bash
 ---

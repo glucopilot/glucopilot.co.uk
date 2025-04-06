@@ -1,9 +1,9 @@
 # ----
 # Site
 
-title: Aviator
-description: Jekyll template for API documentation.
-url: https://example.com
+title: GlucoPilot Docs
+description: GlucoPilot API documentation.
+url: https://glucopilot.co.uk
 google_analytics_key:
 permalink: pretty
 baseurl:
@@ -17,9 +17,12 @@ collections:
   documentation:
     title: Documentation
     position_number: 1
+  identity:
+    title: Identity
+    position_number: 2
   api:
     title: APIs
-    position_number: 2
+    position_number: 3
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -29,18 +32,15 @@ exclude:
   - LICENSE
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: default
-  -
-    scope:
+  - scope:
       type: "documentation"
     values:
       _hide_content: true
-  -
-    scope:
+  - scope:
       type: "api"
     values:
       _hide_content: true
@@ -50,6 +50,7 @@ defaults:
 
 types:
   - get
+  - patch
   - put
   - delete
   - post
@@ -57,14 +58,12 @@ types:
 languages:
   bash: Bash
   c: C
+  csharp: C#
   css: CSS
   html: HTML
   java: Java
   javascript: JavaScript
   json: JSON
-  php: PHP
-  python: Python
-  ruby: Ruby
 
 _options:
   content_markdown:
