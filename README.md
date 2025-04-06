@@ -1,2 +1,2 @@
 # glucopilot.co.uk
-GlucoPilot webiste
+GlucoPilot website
