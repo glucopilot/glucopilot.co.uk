@@ -24,13 +24,15 @@ description: >- # this means to ignore newlines until "baseurl:"
   Your partner in dabetes care.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.glucopilot.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
 github_username: glucopilot
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
+
+sass:
+  style: compressed
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -50,3 +52,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - serve.ps1

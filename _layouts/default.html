@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+    <head>
+        <title>{{ page.title | default: site.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta
+            name="description"
+            content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+        />
+        <meta
+            name="keywords"
+            content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}"
+        />
+        <meta name="author" content="GlucoPilot" />
+        <meta property="og:site_name" content="GlucoPilot" />
+        <meta
+            property="og:url"
+            content="{{ site.url }}{{ page.url | replace_first: 'index.html', '' }}"
+        />
+        <meta
+            property="og:title"
+            content="{{ page.title | default: site.title }}"
+        />
+        <meta
+            property="og:description"
+            content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+        />
+        <meta
+            property="og:type"
+            content="{{ page.og_type | default: 'website' }}"
+        />
+        <link rel="icon" type="image/png" href="/images/favicon.png" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            href="/feed.xml"
+            title="RSS feed"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ '/assets/css/main.css' | relative_url }}"
+        />
+    </head>
+    <body>
+        {{ content }}
+    </body>
+</html>
