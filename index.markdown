@@ -21,21 +21,22 @@ layout: default
             </div>
 
             <div class="form-section">
-            <p>
-            Early access registration coming soon.
-            </p>
-                <!--<p>
+                <p>
                     Register your interest to receive early access to
                     the app.
                 </p>
-                <form>
+                <form id="register-form">
                     <input
+                        id="email-input"
                         type="email"
                         placeholder="Your Email"
                         required
                     />
                     <button type="submit">GET EARLY ACCESS</button>
-                </form>-->
+                </form>
+                <p id="register-message" class="register-message"></p>
+
+                <script src="/assets/js/register.js"></script>
             </div>
 
             <div class="links">
