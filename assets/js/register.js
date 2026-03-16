@@ -14,11 +14,8 @@ document.getElementById('register-form').addEventListener('submit', async functi
             messageEl.textContent = "You're on the list! We'll be in touch soon.";
             messageEl.classList.add('register-message--success');
             document.getElementById('email-input').value = '';
-        } else if (response.status === 404) {
+        } else if (response.status === 400) {
             messageEl.textContent = 'Please enter a valid email address.';
-            messageEl.classList.add('register-message--error');
-        } else if (response.status === 409) {
-            messageEl.textContent = 'This email address is already registered.';
             messageEl.classList.add('register-message--error');
         } else {
             messageEl.textContent = 'Something went wrong. Please try again.';
